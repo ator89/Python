@@ -27,22 +27,41 @@ Minimum monthly payment = (Minimum monthly payment rate) x (Previous balance)
 Monthly unpaid balance = (Previous balance) - (Minimum monthly payment)
 Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
 
+
+
+balance = 4973.5
+annualInterestRate = 0.18
+monthlyPaymentRate = 0.02
+
+monthlyInterestRate = annualInterestRate/12.0
+minimumPayment = balance * monthlyPaymentRate
+unpaidBalance = balance - minimumPayment
+monthlyInterest = (annualInterestRate/12) * unpaidBalance
+interest =(annualInterestRate/12) * unpaidBalance
+
+nextBalance = unpaidBalance + (monthlyInterestRate*unpaidBalance)
+
+print("\nRemaining balance:",balance)
+print('Next Balance: ',nextBalance)
+print("Monthly Interest:",monthlyInterest)
+print('Minimum Payment:',minimumPayment)
+print('Unpaid Balance:',unpaidBalance)
 """
 
 balance = 42
 annualInterestRate = 0.2
 monthlyPaymentRate = 0.04
 
-monthlyInterestRate = annualInterestRate/12.0
-minimumPayment = balance * annualInterestRate
-unpaidBalance = balance - minimumPayment
-monthlyInterest = (monthlyPaymentRate/12) * unpaidBalance
+monthly_interest_rate = (annualInterestRate / 12)
 
-nextBalance = unpaidBalance + (monthlyInterestRate*unpaidBalance)
+for i in range(1, 13):
+    # minimum that should be paid
+    minimum_monthly_payment = round(monthlyPaymentRate * balance, 2)
 
-print("\nRemaining balance:",balance)
-print('Next Balance: ',nextBalance)
-print("Monthly Interest:",monthlyInterestRate)
-print('Minimum Payment:',minimumPayment)
-print('Unpaid Balance:',unpaidBalance)
+    # deducts the min payment from balance
+    monthly_unpaid_balance = round(balance - minimum_monthly_payment, 2)
 
+    # adds interest fees
+    balance = round((balance - minimum_monthly_payment) + (monthly_unpaid_balance * monthly_interest_rate), 2)
+
+print('Remaining balance:',balance)
