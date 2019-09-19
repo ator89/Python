@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="541f1b99-545c-4321-a1ec-a3c19f47cd85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/week2/polysum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/list.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,7 +45,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.pset_p2">
+  <component name="RunManager" selected="Python.list">
+    <configuration name="list" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MITx_Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week3/list.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="pset_p1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MITx_Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,27 +130,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="week2_functions_iterPower" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="MITx_Python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week2_functions_iterPower.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="week2_functions_recPower" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MITx_Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -153,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.list" />
         <item itemvalue="Python.pset_p2" />
         <item itemvalue="Python.pset_p1" />
         <item itemvalue="Python.week2_files" />
         <item itemvalue="Python.week2_functions_recPower" />
-        <item itemvalue="Python.week2_functions_iterPower" />
       </list>
     </recent_temporary>
   </component>
