@@ -51,6 +51,16 @@ def isWordGuessed(secretWord, lettersGuessed):
       False otherwise
     '''
     # FILL IN YOUR CODE HERE...
+    count1 = 0
+    count2 = len(secretWord)
+    for i in secretWord:
+        if i in lettersGuessed:
+            count1 += 1
+
+    if count1 == count2:
+        return True
+    else:
+        return False
 
 
 
@@ -62,7 +72,14 @@ def getGuessedWord(secretWord, lettersGuessed):
       what letters in secretWord have been guessed so far.
     '''
     # FILL IN YOUR CODE HERE...
+    ll = list(secretWord)
 
+    for i in range(len(secretWord)):
+        if secretWord[i] not in lettersGuessed:
+            ll[i] = '_ '
+
+    salida = ""
+    return salida.join(ll)
 
 
 def getAvailableLetters(lettersGuessed):
@@ -72,6 +89,14 @@ def getAvailableLetters(lettersGuessed):
       yet been guessed.
     '''
     # FILL IN YOUR CODE HERE...
+    abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+           'k', 'l', 'm', 'o', 'p', 'q', 'r', 's', 't', 'u',
+           'v', 'w', 'x', 'y', 'z']
+
+    for i in lettersGuessed:
+        abc.remove(i)
+    salida = ""
+    return salida.join(abc)
     
 
 def hangman(secretWord):
