@@ -131,7 +131,7 @@ def hangman(secretWord):
 
         while 8 - mistakesMade > 0:
 
-            if isWordGuessed(secretWord, lettersGuessed) = True:
+            if isWordGuessed(secretWord, lettersGuessed) == True:
                 print('----------')
                 print('Congratulations, you won!')
                 break

@@ -68,7 +68,7 @@ def hangman(secretWord):
 
 
 
-        if isWordGuessed(secretWord, lettersGuessed) = True:
+        if isWordGuessed(secretWord, lettersGuessed) == True:
             print('----------')
             print('Congratulations, you won!')
             break
