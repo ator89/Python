@@ -5,6 +5,8 @@ from ps4a import *
 # You don't need to understand how this test code works (but feel free to look it over!)
 
 # To run these tests, simply run this file (open up in your IDE, then run the file as normal)
+from week4.ProblemSet4.ps4a import *
+
 
 def test_getWordScore():
     """
