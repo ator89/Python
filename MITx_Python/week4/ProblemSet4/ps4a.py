@@ -291,23 +291,25 @@ def playGame(wordList):
     """
     # TO DO ... <-- Remove this comment when you code this function
     #print("playGame not yet implemented.") # <-- Remove this line when you code the function
-    option = input("Enter n to deal a new hand, r to replay the last hand, or e to end game:")
-    while option == 'r':
-        print("You have not played a hand yet. Please play a new hand first!")
-        print
-        option = input("Enter n to deal a new hand, r to replay the last hand, or e to end game:")
-    while not (option == 'e'):
-        bec = 0
-        if option == 'n':
-            prevHand = dealHand(HAND_SIZE)
-            hand = playHand(prevHand, wordList, HAND_SIZE)
-            bec = 1
-        if option == 'r':
-            hand = prevHand.copy()
-            bec = 1
-        if bec == 0:
+    hand = None
+    i = input("Enter n to deal a new hand, r to replay the last hand, " +
+                  "or e to end game: ")
+
+    while i != 'e':
+        if i == 'n':
+            hand = dealHand(HAND_SIZE)
+            playHand(hand, wordList, HAND_SIZE)
+        elif i == "r":
+            if hand == None:
+                print("You have not played a hand yet. Please play a new " +
+                      "hand first!\n")
+            else:
+                playHand(hand, wordList, HAND_SIZE)
+        else:
             print("Invalid command.")
-        option = input("Enter n to deal a new hand, r to replay the last hand, or e to end game")
+
+        i = input("Enter n to deal a new hand, r to replay the last " +
+                      "hand, or e to end game: ")
 
 
 
