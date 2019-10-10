@@ -1,4 +1,5 @@
 from ps4a import *
+from week4.ProblemSet4.ps4a import *
 import time
 
 
@@ -125,7 +126,45 @@ def playGame(wordList):
     wordList: list (string)
     """
     # TO DO... <-- Remove this comment when you code this function
-    print("playGame not yet implemented.") # <-- Remove this when you code this function
+
+
+    hand = None
+    i = input("Enter n to deal a new hand, r to replay the last hand, " +
+          "or e to end game: ")
+
+    while i != "e":
+        if i == "n":
+            hand = dealHand(HAND_SIZE)
+        elif i == "r":
+            if hand == None:
+                print("You have not played a hand yet. Please play a new " +
+                  "hand first!")
+                i = input("Enter n to deal a new hand, r to replay the " +
+                      "last hand, or e to end game: ")
+
+                continue
+        else:
+            print("Invalid command.\n")
+            i = input("Enter n to deal a new hand, r to replay the " +
+                  "last hand, or e to end game: ")
+
+            continue
+
+        player = input("Enter u to have yourself play, c to have the " +
+                   "computer play: ")
+
+        while player != "u" and player != "c":
+            print("Invalid command.\n")
+            player = input("Enter u to have yourself play, c to have " +
+                       "the computer play: ")
+
+        if player == "u":
+            playHand(hand, wordList, HAND_SIZE)
+        else:
+            compPlayHand(hand, wordList, HAND_SIZE)
+
+        i = input("Enter n to deal a new hand, r to replay the last " +
+              "hand, or e to end game: ")
 
         
 #
