@@ -82,4 +82,4 @@ class Student(Person):
             print("i am watching tv")
 
     def __str__(self):
-        return "student:" + str(self.name) + ":" + str(self.age)
+        return "student:" + str(self.name) + ":" + str(self.age) + ":" + str(self.major)
