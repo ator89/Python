@@ -17,5 +17,31 @@ class Person(object):
             raise ValueError
         return (datetime.date.today() - self.birthday).days
 
+    def __lt__(self, other):
+        """return True if self's is lexicographically
+            less than other's name, and False otherwise
+        """
+        if self.lastName == other.lastName:
+            return self.name < other.name
+        return self.lastName < other.lastName
+
     def __str__(self):
         return self.name
+
+
+class MITPerson(Person):
+    nextIdNum = 0
+
+    def __init__(self, name):
+        Person.__init__(self, name)
+        self.idNum = MITPerson.nextIdNum
+        MITPerson.nextIdNum += 1
+
+    def getIdNum(self):
+        return self.idNum
+
+    def __lt__(self, other):
+        return self.idNum < other.IdNum
+
+    def speak(self, utterance):
+        return (self.getLastname() + " says: " + utterance)
