@@ -83,7 +83,7 @@ class Hand(object):
         returns: Boolean (if the word was or was not made)
         """
         # Your code here
-        raise NotImplementedError()
+        #raise NotImplementedError()
         # Make a copy of the hand, and try to update it
         new_hand = self.hand.copy()
         for letter in word:
