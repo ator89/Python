@@ -42,7 +42,7 @@ class Grades(object):
         if not self.isSorted:
             self.students.sort()
             self.isSorted = True
-        #return self.students[:]
+        #return self.students[:] <<<-- copy
         for s in self.students:
             yield s
 
